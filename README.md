@@ -30,17 +30,17 @@ Teachers of all subjects are constantly working with new vocabulary words. We pr
 
 ## Technologies Used
 
-| Technology    | Purpose                                   |
-| ------------- | ----------------------------------------- |
-| Express.js    | server framework for Node.js              |
-| Node.js       | back-end code                             |
-| Handlebars.js | templating engine                         |
-| MySQL         | database management system                |
-| Sequelize     | ORM for MySQL                             |
-| Pure CSS      | CSS Framework                             |
-| dotenv        | configuration of environmental variables  |
-| bcrypt        | password hashing                          |
-| Sortable      | NPM package for dragging/dropping objects |
+| Technology         | Purpose                                        |
+| ------------------ | ---------------------------------------------- |
+| Express.js         | server framework for Node.js                   |
+| Node.js            | back-end code                                  |
+| express-handlebars | Handlebars.js templating engine for express.js |
+| MySQL              | database management system                     |
+| Sequelize          | ORM for MySQL                                  |
+| Pure CSS           | CSS Framework                                  |
+| dotenv             | configuration of environmental variables       |
+| bcrypt             | password hashing                               |
+| Sortable           | NPM package for dragging/dropping objects      |
 
     "dotenv": "^14.3.2",
     "dragula": "^3.7.3",
@@ -54,7 +54,12 @@ Teachers of all subjects are constantly working with new vocabulary words. We pr
 
 ## Game Explanation
 
-If you've never played, read [Wikipedia's description](https://en.wikipedia.org/wiki/Tic-tac-toe)
+If you've never played tic-tac-toe, read [Wikipedia's description](https://en.wikipedia.org/wiki/Tic-tac-toe)
+
+| Traditional Tic-Tac-Toe                 | Vocab Tic-Tac-Toe                                                                                                                                                                                                                                                                                          |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| You start with a blank board            | Each of the 9 squares has a picture on it, with the words corresponding to the pictures off to the side.                                                                                                                                                                                                   |
+| Players take turns marking their X or O | In order to claim a space, players need to match a vocab word's picture from the board with the written word on the side of the screen.</br>_Example_:</br> A player clicks on a "cow" picture on the board, and the word "vaca" in the word list on the side. This earns an "X" for that player.<li></ul> |
 
 ## GitHub Issues
 
