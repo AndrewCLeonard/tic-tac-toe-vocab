@@ -1,30 +1,54 @@
 # Tic Tac Toe Vocab Game
 
-Practice or learn vocabulary by playing tic-tac-toe. In order to add X's and O's to the board, players need to correctly match a picture on the tic-tac-toe board with the written word.
+Practice or learn vocabulary by playing tic-tac-toe. In order to add X's and O's to the board, players need to correctly match a picture, such as "spaceship" with the picture 🚀.
 
 ## Table of Contents
 
-# Table of Contents
+1. [General Information](#General-Information)
+1. [Technologies Used](#Technologies-Used)
+1. [Features](#Features)
+1. [Screenshots](#Screenshots)
+1. [Setup](#Setup)
+1. [Usage](#Usage)
+1. [Project Status](#Project-Status)
+1. [Room for Improvement](#Room-for-Improvement)
+1. [Acknowledgements](#Acknowledgements)
+1. [Contact](##Contact)
 
-1. [Example](#Student-Accounts)
-2. [Example2](#example2)
-3. [Third Example](#third-example)
-4. [Fourth Example](#fourth-example)
+## General Information
 
-## Example
+Teachers of all subjects are constantly working with new vocabulary words. We provide educators a new tool to give students the repetitions they need. The idea came from two public school elementary teachers looking for new ways to engage their students in 2022 during a period of hybrid in-person/remote learning.
 
-## Example2
+## Features
 
-## Third Example
+-   Teachers create and save their own vocab lists matched with images
+-
+
+## Setup
 
 ## [Fourth Example](http://www.fourthexample.com)
 
 ## Technologies Used
 
-| Technology | Purpose                 |
-| ---------- | ----------------------- |
-| Express.js | Used as server for Node |
-| Node.js    |
+| Technology    | Purpose                                   |
+| ------------- | ----------------------------------------- |
+| Express.js    | server framework for Node.js              |
+| Node.js       | back-end code                             |
+| Handlebars.js | templating engine                         |
+| MySQL         | database management system                |
+| Sequelize     | ORM for MySQL                             |
+| Pure CSS      | CSS Framework                             |
+| dotenv        | configuration of environmental variables  |
+| bcrypt        | password hashing                          |
+| Sortable      | NPM package for dragging/dropping objects |
+
+    "dotenv": "^14.3.2",
+    "dragula": "^3.7.3",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "mysql2": "^2.3.3",
+    "purecss": "^2.0.6",
+    "sequelize": "^6.14.1"
 
 ## General Info
 
@@ -114,5 +138,3 @@ As a student/player...
 #### Actions During Each Turn
 
 #### Game Ending
-
-
