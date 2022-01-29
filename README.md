@@ -1,5 +1,33 @@
 # Tic Tac Toe Vocab Game
 
+Practice or learn vocabulary by playing tic-tac-toe. In order to add X's and O's to the board, players need to correctly match a picture on the tic-tac-toe board with the written word.
+
+## Table of Contents
+
+# Table of Contents
+
+1. [Example](#Student-Accounts)
+2. [Example2](#example2)
+3. [Third Example](#third-example)
+4. [Fourth Example](#fourth-example)
+
+## Example
+
+## Example2
+
+## Third Example
+
+## [Fourth Example](http://www.fourthexample.com)
+
+## Technologies Used
+
+| Technology | Purpose                 |
+| ---------- | ----------------------- |
+| Express.js | Used as server for Node |
+| Node.js    |
+
+## General Info
+
 ## Game Explanation
 
 If you've never played, read [Wikipedia's description](https://en.wikipedia.org/wiki/Tic-tac-toe)
@@ -23,7 +51,7 @@ _The GitHub issues below define project scope and goals._
     -   probably too complex: do it from scratch with json web tokens (JWT) [Node.js with Passport Authentication](https://www.youtube.com/watch?v=7nafaH9SddU)
     -   OAuth- could allow Google logins
         -   OAuth = protocol
-        -   AuthO = a company that does 
+        -   AuthO = a company that does
 -   need regex [Omar-recommended tutorial: What is Regex?](https://www.youtube.com/watch?v=r6I-Ahc0HB4)
 
 #### Instructor Accounts
@@ -86,3 +114,5 @@ As a student/player...
 #### Actions During Each Turn
 
 #### Game Ending
+
+
