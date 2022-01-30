@@ -1,145 +1,109 @@
 # Tic Tac Toe Vocab Game
 
-Practice or learn vocabulary by playing tic-tac-toe. In order to add X's and O's to the board, players need to correctly match a picture, such as "spaceship" with the picture 🚀.
+Learn and review new vocabulary by playing tic-tac-toe. In order to add X's and O's to the board, players must correctly match a picture, such as "spaceship" with the image of the spaceship. 🚀
 
 ## Table of Contents
 
-1. [General Information](#General-Information)
-1. [Technologies Used](#Technologies-Used)
+1. [Description](#Project-Description)
 1. [Features](#Features)
-1. [Screenshots](#Screenshots)
 1. [Setup](#Setup)
+1. [Technologies Used](#Technologies-Used)
+1. [Game Explanation](#Game-Explanation)
+1. [Screenshots](#Screenshots)
 1. [Usage](#Usage)
 1. [Project Status](#Project-Status)
 1. [Room for Improvement](#Room-for-Improvement)
 1. [Acknowledgements](#Acknowledgements)
-1. [Contact](##Contact)
+1. [Contact](#Contact)
 
-## General Information
+## Project Description
 
-Teachers of all subjects are constantly working with new vocabulary words. We provide educators a new tool to give students the repetitions they need. The idea came from two public school elementary teachers looking for new ways to engage their students in 2022 during a period of hybrid in-person/remote learning.
+### Origin
 
-## Features
+This project idea came from two public school elementary teachers looking for new ways to help students in remote classrooms learn new vocabulary words.
 
--   Teachers create and save their own vocab lists matched with images
--
+One of these teachers, Andrew, brought the idea to his classmates in UCLA's Full-Stack Development course, and they brought it to life!
 
-## Setup
-
-## [Fourth Example](http://www.fourthexample.com)
-
-## Technologies Used
-
-| Technology         | Purpose                                        |
-| ------------------ | ---------------------------------------------- |
-| Express.js         | server framework for Node.js                   |
-| Node.js            | back-end code                                  |
-| express-handlebars | Handlebars.js templating engine for express.js |
-| MySQL              | database management system                     |
-| Sequelize          | ORM for MySQL                                  |
-| Pure CSS           | CSS Framework                                  |
-| dotenv             | configuration of environmental variables       |
-| bcrypt             | password hashing                               |
-| Sortable           | NPM package for dragging/dropping objects      |
-
-    "dotenv": "^14.3.2",
-    "dragula": "^3.7.3",
-    "express": "^4.17.2",
-    "express-handlebars": "^6.0.2",
-    "mysql2": "^2.3.3",
-    "purecss": "^2.0.6",
-    "sequelize": "^6.14.1"
-
-## General Info
-
-## Game Explanation
+### Game Explanation
 
 If you've never played tic-tac-toe, read [Wikipedia's description](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
-| Traditional Tic-Tac-Toe                 | Vocab Tic-Tac-Toe                                                                                                                                                                                                                                                                                          |
-| --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| You start with a blank board            | Each of the 9 squares has a picture on it, with the words corresponding to the pictures off to the side.                                                                                                                                                                                                   |
-| Players take turns marking their X or O | In order to claim a space, players need to match a vocab word's picture from the board with the written word on the side of the screen.</br>_Example_:</br> A player clicks on a "cow" picture on the board, and the word "vaca" in the word list on the side. This earns an "X" for that player.<li></ul> |
+| Traditional Tic-Tac-Toe                     | Vocab Tic-Tac-Toe                                                                                                 | Examples                                                                                                                                         |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Pencil and paper                            | Using our app!                                                                                                    | _insert live example here_                                                                                                                       |
+| Two players start with a blank board        | Each of the 9 squares has a picture on it, with the words corresponding to the pictures off to the side.          | ![480x270](https://www.fillmurray.com/g/640/360)                                                                                                 |
+| Players take turns marking their "X" or "O" | To claim a space, players match a vocab word's picture from the board with the written word on the side.          | _Example_: A player clicks on a "cow" picture on the board, and the word "vaca" in the word list on the side. This earns an "X" for that player. |
+| Players alternate, taking turns             | Players alternate matching pictures and words. However, if a player's attempt is incorrect, they lose their turn. |
 
-## GitHub Issues
+### Features
 
-_The GitHub issues below define project scope and goals._
+Players create logins to save their info:
 
-### Account Management
+-   username/password
+-   list of their vocab words
+-   game boards they've created
 
-#### Tech Needed for Authentication
+## Screenshots
 
--   Express (_required_)
--   Handlebars (_required_)
--   Node (_required_)
--   password hashing
-    -   does passport.js include password hashing?
-    -   use bcrypt if hashing not included in passport.js library
--   authentication options
-    -   passport.js (library incorporates json web tokens and OAuth)
-    -   probably too complex: do it from scratch with json web tokens (JWT) [Node.js with Passport Authentication](https://www.youtube.com/watch?v=7nafaH9SddU)
-    -   OAuth- could allow Google logins
-        -   OAuth = protocol
-        -   AuthO = a company that does
--   need regex [Omar-recommended tutorial: What is Regex?](https://www.youtube.com/watch?v=r6I-Ahc0HB4)
+### Login Screen
 
-#### Instructor Accounts
+_What players will see when they first visit the website_
 
-Authentication vs. Authorization will be tricky
+### Adding Vocab and Images
 
--   authentication = allowing people to access a different part of the application
--   Instructors have their own "teacher" admin-level login
--   Teachers can create and save class rosters
-    -   Teachers may copy/paste class rosters from a spreadsheet or document to populate player lists
-    -   The app will save lists of student names in the instructor account for teachers to re-access when their once again logged in
-    -   Teachers can create groups of students and label these groups in various ways:
-        -   class (e.g. "Mrs. Balane's class" or "3rd period")
-        -   grade (e.g. )
-        -   school
-        -   custom name?
+_Players add their vocab words and the matching image to set up their games. This data is saved for later use/reuse._
+![login](https://www.fillmurray.com/g/1920/1080)
 
-#### Student Accounts
+### New Game
 
--   Instructor invites students to join the game
--   students create their own "student" logins
-    -   for younger students, option to have "picture" login, where students select an image or series of images?
+_View at the beginning of a game_
 
-### Gameplay
+![login](https://www.fillmurray.com/g/1920/1080)
 
-#### Gameplay Tech Needed
+### Successful Match
 
--   drag/drop functionality
-    -   HTML 5 has drag/drop API, but look on NPM
-        -   sortablejs
-        -   dragula
-    -   don't use jQuery for drag/drop. Learn e.g. React in near future
+\_When a player makes a correct match, the image on the board is replaced with their "X" or "O".
+![login](https://www.fillmurray.com/g/1920/1080)
 
-#### Game Setup by Instructor
+### Unsuccessful Match
 
-Before students can start a game, the instructor will...
+_If a player is incorrect, they forfeit their turn._
+![login](https://www.fillmurray.com/g/1920/1080)
 
--   choose vocabulary lists for
-    -   rows
-    -   columns
+### Victory/End of Game Screen
 
-### Student/Player Game Setup
+_End-of-game screen_
+![login](https://www.fillmurray.com/g/1920/1080)
 
-As a student/player...
+## Setup
 
--   I can play other students online (_leave this for a later iteration?_)
+-   Clone the repo
+-   Ensure you have Node.js installed
+-   From the command line, run `npm i` to add our dependencies to your computer's version of our repo (Node uses the dependencies listed in our `package.json` file).
 
-### User display during the game
+### Technologies Used
 
-#### Display Setup
+|                       | Technology         | Purpose                                                                                      |
+| --------------------- | ------------------ | -------------------------------------------------------------------------------------------- |
+| Back-End              | Express.js         | server framework for Node.js                                                                 |
+|                       | Node.js            | back-end code                                                                                |
+|                       | MySQL              | database management system                                                                   |
+|                       | Sequelize          | ORM for MySQL                                                                                |
+|                       | dotenv             | configuration of environmental variables (allows developers to safely store their passwords) |
+|                       | bcrypt             | password hashing                                                                             |
+|                       | Sortable           | NPM package for dragging/dropping objects                                                    |
+| Front-End             | Pure CSS           | CSS Framework                                                                                |
+|                       | express-handlebars | Handlebars.js templating engine for express.js                                               |
+| Deployment            | Heroku             | Deployment of the Node/Express app                                                           |
+|                       | JawsDB             | database hosting and configuration                                                           |
+| Drafting/ Diagramming | Sketch.com         | create website mockups                                                                       |
+|                       | LucidChart         | create ER and UML diagrams                                                                   |
+| Code Management       | GitHub             | code hosting, collaboration, and version control                                             |
 
--   On each player's screen:
+## Project Status
 
-### Gameplay
+## Areas to Improve
 
-#### Choose Who Goes First
+## Acknowledgements
 
--   Option to choose who goes first, or have a virtual coin flip
-
-#### Actions During Each Turn
-
-#### Game Ending
+## Contact Info
