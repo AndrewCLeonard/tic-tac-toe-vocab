@@ -30,7 +30,7 @@ body {
 :root {
 	--fonts: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	/* header color alpha value should be 1, but having problems with Pure CSS, setting to transparent for now*/
-	--header-color: rgba(211, 211, 211, 0); 
+	--header-color: rgba(211, 211, 211, 0);
 }
 /* VARIABLES END */
 
@@ -78,20 +78,66 @@ body {
 /* BOARD STYLES START */
 /* ========================================================================== */
 
-.board {
-	width: 100vw;
-	height: 100vh;
+/* using ID selector because it's unique */
+#board {
+	/* width: 100vw; */
+	/* height: 100vh; */
 	display: grid;
 	justify-content: center;
 	align-content: center;
 	grid-template-columns: repeat(3, auto);
 	/* background-color: black; */
 }
+/* BOARD STYLES END */
 
-.board-square {
-	width: 100px;
-	height: 100px;
-	background-color: black;
+/* ========================================================================== */
+/* CELL STYLES START */
+/* ========================================================================== */
+
+.cell {
+	width: var(--cell-size);
+	height: var(--cell-size);
+	border: 6px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	/* cursor: pointer; */
+}
+.cell img {
+	margin: 5px;
+	height: 200px;
 }
 
+.cell img:hover {
+	filter: saturate(200%);
+	cursor: pointer;
+	/* It would be nice if image size changed a bit when you hover over, but that's also now changing the border as well */
+	/* height: 150px; */
+	transition: all 300ms ease;
+}
+
+/* `cell applied to all 9 boxes on the tic-tac-toe board */
+
 /* BOARD STYLES END */
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+	border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+	border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+	border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7) {
+	border-bottom: none;
+}
+/* CELL STYLES END */
