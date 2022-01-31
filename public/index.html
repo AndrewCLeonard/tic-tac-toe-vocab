@@ -20,37 +20,46 @@
 	<body>
 		<!-- HEADER START -->
 		<header class="header">
-			<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-				<img src="./images/logos/tic-tac-toe-v2.png" alt="Tic-Tac-Toe-Vocab logo" width="10%">
-
-				<ul class="pure-menu-list">
-					<li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-					<li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
-					<li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
-				</ul>
+			<!-- removing class .pure-menu-fixed changed menu from inline to block? -->
+			<div class="home-menu pure-menu pure-menu-horizontal">
+				<img src="./images/logos/tic-tac-toe-v2.png" alt="Tic-Tac-Toe-Vocab logo" width="10%" />
+				<!-- NAV START -->
+				<nav class="pure-menu-list">
+					<ul>
+						<!-- Q: pure css has .pure-menu-selected class to darken color of link of current page. Can this class  be added with Handlebars? -->
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">Upload</a></li>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">Gallery</a></li>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">FAQ</a></li>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">High Scores</a></li>
+					</ul>
+				</nav>
+				<!-- NAV END -->
 			</div>
 		</header>
-		<!-- NAV START -->
-		<nav></nav>
-		<!-- NAV END -->
 		<!-- HEADER END -->
 		<!-- MAIN START -->
+		<!-- N.B. Pure CSS *requires* you to use .content-wrapper and .content classes -->
 		<main>
 			<!-- BOARD SECTION START -->
-			<section class="board" id="board"></section>
-			<div class="cell" board-square></div>
-			<div class="cell" board-square></div>
-			<div class="cell" board-square></div>
-			<div class="cell" board-square></div>
-			<div class="cell" board-square></div>
-			<div class="cell" board-square></div>
-			<div class="cell" board-square></div>
-			<div class="cell" board-square></div>
-			<div class="cell" board-square></div>
+			<div class="content-wrapper">
+				<section class="board-square content" id="board">
+					<!-- the `data-*` attribute embeds custom data to be used in js -->
+					<div class="cell" data-board-square></div>
+					<div class="cell" data-board-square></div>
+					<div class="cell" data-board-square></div>
+					<div class="cell" data-board-square></div>
+					<div class="cell" data-board-square></div>
+					<div class="cell" data-board-square></div>
+					<div class="cell" data-board-square></div>
+					<div class="cell" data-board-square></div>
+					<div class="cell" data-board-square></div>
+				</section>
+			</div>
 			<!-- BOARD SECTION END -->
 			<!-- WORD LIST SECTION START -->
-			<section class="word-list"></section>
+			<section class="word-list content"></section>
 			<!-- WORD LIST SECTION END -->
+			<!-- use a div to show game over message? -->
 		</main>
 		<!-- MAIN END -->
 		<!-- FOOTER START -->
