@@ -13,7 +13,7 @@ menu
 *,
 *::after,
 *::before {
-	box-sizing: border-box;
+	box-sizing: content-box;
 }
 
 body {
@@ -80,12 +80,18 @@ body {
 
 /* using ID selector because it's unique */
 #board {
-	/* width: 100vw; */
-	/* height: 100vh; */
+	/* do I need to specipy viewport h and w if using Pure CSS grid? */
+	/* width: 50vw; */
+	/* height: 50vh; */
 	display: grid;
-	justify-content: center;
-	align-content: center;
 	grid-template-columns: repeat(3, auto);
+	/* justify-content makes the board go partially off-screen? Why? */
+	/* justify-content: center; */
+	/* align-content: center; */
+
+	/* commented these out because they don't do anything? */
+
+	/* for checking things as needed */
 	/* background-color: black; */
 }
 /* BOARD STYLES END */
@@ -95,26 +101,33 @@ body {
 /* ========================================================================== */
 
 .cell {
-	width: var(--cell-size);
-	height: var(--cell-size);
+	/* width: var(--cell-size); */
+	/* height: var(--cell-size); */
 	border: 6px solid black;
-	display: flex;
+	/* display: flex; */
 	justify-content: center;
 	align-items: center;
 	position: relative;
 	/* cursor: pointer; */
 }
 .cell img {
-	margin: 5px;
-	height: 200px;
+	/* display: flex; */
+
+	margin: 10px;
+	/* height: 200px; */
+	/* for checking things as needed */
+	/* border-style: solid; */
+	/* border-color: blue; */
 }
 
 .cell img:hover {
-	filter: saturate(200%);
+	filter: saturate(150%);
 	cursor: pointer;
 	/* It would be nice if image size changed a bit when you hover over, but that's also now changing the border as well */
-	/* height: 150px; */
-	transition: all 300ms ease;
+	border-style: solid;
+	border-color: yellow;
+	border-width: medium;
+	/* transition: all 300ms ease; */
 }
 
 /* `cell applied to all 9 boxes on the tic-tac-toe board */
