@@ -1,5 +1,6 @@
 // win conditions function
-//      list of possible winning combinations
+
+// list of possible winning combinations
 
 const winCombos = [
 	[0, 1, 2], //
@@ -11,13 +12,21 @@ const winCombos = [
 	[0, 4, 8],
 	[6, 4, 2],
 ];
-
-const tableCells = document.querySelectorAll('.table-cells');
+// calling const tableCells instead of Cells for now
+const tableCells = document.querySelectorAll(".table-cells");
 startGame();
 
 function startGame() {
+	origBoard = Array.from(Array(9).keys());
+	tableCells.forEach((cell) => {
+		// we're not using letter X's or O's, but in case we do, leaving it in
+		// cell[i].innerText = '';
 
-};
+		// when player wins, hope to add background color to the winning row. This removes it at start of game
+		cell[i].style.removeProperty("background-color");
+		cell[i].addEventListener("click", turnClick, false);
+	});
+}
 //      if one of these is met, game over
 
 //      else game keeps going
