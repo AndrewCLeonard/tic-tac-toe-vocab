@@ -12,7 +12,7 @@ const winCombos = [
 	[0, 4, 8],
 	[6, 4, 2],
 ];
-// calling const tableCells instead of Cells for now
+// naming the const tableCells instead of Cells for now
 const tableCells = document.querySelectorAll(".table-cells");
 startGame();
 
@@ -20,7 +20,7 @@ function startGame() {
 	origBoard = Array.from(Array(9).keys());
 	tableCells.forEach((cell) => {
 		// we're not using letter X's or O's, but in case we do, leaving it in
-		// cell[i].innerText = '';
+		cell[i].innerText = '';
 
 		// when player wins, hope to add background color to the winning row. This removes it at start of game
 		cell[i].style.removeProperty("background-color");
