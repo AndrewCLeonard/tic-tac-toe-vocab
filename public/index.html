@@ -17,12 +17,16 @@
 		<!-- styles.css for selected overrides -->
 		<link rel="stylesheet" href="./stylesheets/styles.css" />
 	</head>
+	<!-- HEAD END -->
+
+	<!--BODY START  -->
 	<body>
-		<!-- HEADER START -->
+		<!-- HEADER START: logo, navigation  -->
 		<header class="header">
 			<!-- removing class .pure-menu-fixed changed menu from inline to block? -->
 			<div class="home-menu pure-menu pure-menu-horizontal">
 				<img src="./images/logos/tic-tac-toe-100x100.png" alt="Tic-Tac-Toe-Vocab logo" />
+
 				<!-- NAV START -->
 				<nav class="pure-menu-list">
 					<ul>
@@ -37,52 +41,42 @@
 			</div>
 		</header>
 		<!-- HEADER END -->
+
 		<!-- MAIN START -->
-		<!-- N.B. Pure CSS *requires* you to use .content-wrapper and .content classes -->
-		<main class="pure-g content-wrapper">
-			<!-- BOARD SECTION START -->
-			<section class="board content pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" id="board">
-				<!-- the `data-*` attribute embeds custom data to be used in js -->
-				<!-- including .pure-img class would allow Pure CSS to make images responsive to viewport size -->
-				<div class="cell pure-img" data-cell-1>
-					<img src="./images/animals/cat.png" alt="cat" />
-				</div>
-				<div class="cell pure-img" data-cell-2>
-					<img src="./images/animals/dog.png" alt="dog" />
-				</div>
-				<div class="cell pure-img" data-cell-3>
-					<img src="./images/animals/deer.png" alt="deer" />
-				</div>
-				<div class="cell pure-img" data-cell-4>
-					<img src="./images/animals/seal.png" alt="seal" />
-				</div>
-				<div class="cell pure-img" data-cell-5>
-					<img src="./images/animals/koala.png" alt="koala" />
-				</div>
-				<div class="cell pure-img" data-cell-6>
-					<img src="./images/animals/rhino.png" alt="rhino" />
-				</div>
-				<div class="cell pure-img" data-cell-7>
-					<img src="./images/animals/zebra.png" alt="zebra" />
-				</div>
-				<div class="cell pure-img" data-cell-8>
-					<img src="./images/animals/rabbit.png" alt="rabbit" />
-				</div>
-				<div class="cell pure-img" data-cell-9>
-					<img src="./images/animals/flamingo.png" alt="flamingo" />
+		<main>
+			<!-- TIC-TAC-TOE BOARD START -->
+			<table class="table-board">
+				<tr>
+					<td class="table-cell top-row"><img src="./images/animals/cat.png" alt="" /></td>
+					<td class="table-cell top-row"><img src="./images/animals/cat.png" alt="" /></td>
+					<td class="table-cell top-row"><img src="./images/animals/cat.png" alt="" /></td>
+				</tr>
+				<tr>
+					<td class="table-cell"><img src="./images/animals/cat.png" alt="" /></td>
+					<td class="table-cell"><img src="./images/animals/cat.png" alt="" /></td>
+					<td class="table-cell"><img src="./images/animals/cat.png" alt="" /></td>
+				</tr>
+				<tr class="bottom-row">
+					<td class="table-cell bottom-row"><img src="./images/animals/cat.png" alt="" /></td>
+					<td class="table-cell bottom-row"><img src="./images/animals/cat.png" alt="" /></td>
+					<td class="table-cell bottom-row"><img src="./images/animals/cat.png" alt="" /></td>
+				</tr>
+			</table>
+			<!-- TIC-TAC-TOE BOARD END -->
+			<!-- WORD LIST START -->
+			<section>
+				<h2 class="word-list-title">Word List</h2>
+				<!-- flexbox for buthtons -->
+				<div class="word-list">
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
 				</div>
 			</section>
-			<!-- BOARD SECTION END -->
-			<!-- WORD LIST SECTION START -->
-			<section class="content word-list pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-				<h1>Testing</h1>
-			</section>
-			<!-- WORD LIST SECTION END -->
-			<!-- use a div to show game over message? -->
-		</main>
-		<!-- MAIN END -->
-		<!-- FOOTER START -->
-		<footer></footer>
-		<!-- FOOTER END -->
-	</body>
-</html>
+			<!-- WORD LIST END -->

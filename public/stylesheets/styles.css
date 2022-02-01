@@ -13,12 +13,15 @@ menu
 *,
 *::after,
 *::before {
-	box-sizing: content-box;
+	/* box-sizing: content-box; */
 }
 
 body {
 	margin: 0;
 	border-color: black;
+}
+main {
+	display: flex;
 }
 
 /* GLOBAL END */
@@ -80,13 +83,17 @@ body {
 
 /* using ID selector because it's unique */
 #board {
-	/* do I need to specipy viewport h and w if using Pure CSS grid? */
+	/* do I need to specify viewport h and w if using Pure CSS grid? */
 	/* width: 50vw; */
 	/* height: 50vh; */
 	display: grid;
 	grid-template-columns: repeat(3, auto);
+	/* margin: 20px; */
+
+	/* overflow: hidden; */
+
 	/* justify-content makes the board go partially off-screen? Why? */
-	/* justify-content: center; */
+	justify-content: center;
 	/* align-content: center; */
 
 	/* commented these out because they don't do anything? */
@@ -105,19 +112,21 @@ body {
 	/* height: var(--cell-size); */
 	border: 6px solid black;
 	/* display: flex; */
-	justify-content: center;
-	align-items: center;
-	position: relative;
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* position: relative; */
 	/* cursor: pointer; */
 }
 .cell img {
 	/* display: flex; */
 
 	margin: 10px;
-	height: 200px;
+	/* height: 200px; */
 	/* for checking things as needed */
 	/* border-style: solid; */
 	/* border-color: blue; */
+	max-width: 100%;
+	height: auto;
 }
 
 .cell img:hover {
@@ -126,31 +135,135 @@ body {
 	/* It would be nice if image size changed a bit when you hover over, but that's also now changing the border as well */
 	border-style: solid;
 	border-color: yellow;
-	border-width: medium;
-	/* transition: all 300ms ease; */
+	border-width: small;
+	transition: all 300ms ease;
 }
 
 /* `cell applied to all 9 boxes on the tic-tac-toe board */
 
 /* BOARD STYLES END */
 
-.cell:first-child,
-.cell:nth-child(2),
-.cell:nth-child(3) {
-	border-top: none;
+/* ========================================================================== */
+/* TABLE STYLES START */
+/* ========================================================================== */
+.table-board {
+	margin: 20px;
+	min-width: 500px;
 }
 
-.cell:nth-child(3n + 1) {
+.table-cell {
+	/* background-color: black; */
+}
+
+table {
+	border-collapse: collapse;
+	width: 50%;
+}
+
+th,
+td {
+	border: 16px solid black;
+}
+
+.table-cell:nth-child(1) {
 	border-left: none;
 }
 
-.cell:nth-child(3n + 3) {
+.table-cell:nth-child(3) {
 	border-right: none;
 }
 
-.cell:last-child,
-.cell:nth-child(8),
-.cell:nth-child(7) {
+.top-row {
+	border-top: none;
+}
+
+.bottom-row {
 	border-bottom: none;
 }
+
+.table-cell img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.table-cell:hover {
+	filter: saturate(150%);
+	cursor: pointer;
+	/* I don't like how border also changing */
+	background-color: yellow;
+	transition: 200ms ease;
+}
 /* CELL STYLES END */
+
+/* ========================================================================== */
+/* WORD LIST STYLES START */
+/* ========================================================================== */
+
+.word-list-title {
+	text-align: center;
+}
+/* TEXT STYLES END */
+
+.word-list {
+	display: inline-flex;
+	flex-flow: row wrap;
+	gap: 12px;
+	/* justify-content: space-around; */
+	align-items: flex-start;
+	margin: 20px;
+}
+
+/* ========================================================================== */
+/* BUTTON STYLES START */
+/* ========================================================================== */
+/* not using all of them yet, but we might */
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	padding: 15px 32px;
+	/* width: 25%; */
+}
+
+.button-success {
+	background: rgb(28, 184, 65);
+	/* this is a green */
+}
+
+.button-error {
+	background: rgb(202, 60, 60);
+	/* this is a maroon */
+}
+
+.button-warning {
+	background: rgb(223, 117, 20);
+	/* this is an orange */
+}
+
+.button-secondary {
+	background: rgb(66, 184, 221);
+	/* this is a light blue */
+}
+/* BUTTON SIZES  */
+
+.button-xsmall {
+	font-size: 70%;
+}
+
+.button-small {
+	font-size: 85%;
+}
+
+.button-large {
+	font-size: 110%;
+}
+
+.button-xlarge {
+	font-size: 250%;
+}
+/* BUTTON STYLES END */
