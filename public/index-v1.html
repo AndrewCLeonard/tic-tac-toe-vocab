@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Pure CSS  -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+			integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5"
+			crossorigin="anonymous"
+		/>
+		<!-- Pure CSS responsive grid stylesheet -->
+		<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+		<title>Tic-Tac-Toe-Vocab</title>
+		<!-- styles.css for selected overrides -->
+		<link rel="stylesheet" href="./stylesheets/styles.css" />
+	</head>
+	<body>
+
+
+
+		
+		<!-- HEADER START -->
+		<header class="header">
+			<!-- removing class .pure-menu-fixed changed menu from inline to block? -->
+			<div class="home-menu pure-menu pure-menu-horizontal">
+				<img src="./images/logos/tic-tac-toe-100x100.png" alt="Tic-Tac-Toe-Vocab logo" />
+				<!-- NAV START -->
+				<nav class="pure-menu-list">
+					<ul>
+						<!-- Q: pure css has .pure-menu-selected class to darken color of link of current page. Can this class  be added with Handlebars? -->
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">Upload</a></li>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">Gallery</a></li>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">FAQ</a></li>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">High Scores</a></li>
+					</ul>
+				</nav>
+				<!-- NAV END -->
+			</div>
+		</header>
+		<!-- HEADER END -->
+		<!-- MAIN START -->
+		<!-- N.B. Pure CSS *requires* you to use .content-wrapper and .content classes -->
+		<main class="pure-g">
+			<!-- BOARD SECTION START -->
+			<section class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2" id="board">
+				<!-- the `data-*` attribute embeds custom data to be used in js -->
+				<!-- including .pure-img class would allow Pure CSS to make images responsive to viewport size -->
+				<div class="cell pure-img" data-cell-1>
+					<img src="./images/animals/cat.png" alt="cat" />
+				</div>
+				<div class="cell pure-img" data-cell-2>
+					<img src="./images/animals/dog.png" alt="dog" />
+				</div>
+				<div class="cell pure-img" data-cell-3>
+					<img src="./images/animals/deer.png" alt="deer" />
+				</div>
+				<div class="cell pure-img" data-cell-4>
+					<img src="./images/animals/seal.png" alt="seal" />
+				</div>
+				<div class="cell pure-img" data-cell-5>
+					<img src="./images/animals/koala.png" alt="koala" />
+				</div>
+				<div class="cell pure-img" data-cell-6>
+					<img src="./images/animals/rhino.png" alt="rhino" />
+				</div>
+				<div class="cell pure-img" data-cell-7>
+					<img src="./images/animals/zebra.png" alt="zebra" />
+				</div>
+				<div class="cell pure-img" data-cell-8>
+					<img src="./images/animals/rabbit.png" alt="rabbit" />
+				</div>
+				<div class="cell pure-img" data-cell-9>
+					<img src="./images/animals/flamingo.png" alt="flamingo" />
+				</div>
+			</section>
+			<!-- BOARD SECTION END -->
+			<!-- WORD LIST SECTION START -->
+			<section class="word-list pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+				<h1>Testing</h1>
+			</section>
+			<!-- WORD LIST SECTION END -->
+			<!-- use a div to show game over message? -->
+		</main>
+		<!-- MAIN END -->
+		<!-- FOOTER START -->
+		<footer></footer>
+		<!-- FOOTER END -->
+	</body>
+</html>

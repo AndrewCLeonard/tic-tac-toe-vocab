@@ -1,0 +1,33 @@
+{
+  "name": "tic-tac-toe-vocab",
+  "version": "1.0.0",
+  "description": "Tic-Tac-Toe Vocabulary Game",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewCLeonard/tic-tac-toe-vocab.git"
+  },
+  "keywords": [
+    "SQL",
+    "C#"
+  ],
+  "author": "AndrewCLeonard, Spotts91, SocialCancer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewCLeonard/tic-tac-toe-vocab/issues"
+  },
+  "homepage": "https://github.com/AndrewCLeonard/tic-tac-toe-vocab#readme",
+  "dependencies": {
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "mysql2": "^2.3.3",
+    "purecss": "^2.0.6",
+    "sequelize": "^6.14.1",
+    "sortablejs": "^1.14.0"
+  }
+}

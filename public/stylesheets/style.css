@@ -1,0 +1,47 @@
+.title{
+	margin-top: 50px;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	color: blue;
+}
+
+.login-panel{
+	margin: auto;
+	margin-top: 50px;
+	width: 300px;
+	padding: 15px;
+	background-color: #ffffff;
+}
+
+.avatar-wrapper{
+	position: relative;
+}
+
+.browse-btn{
+	display: block;
+	margin-left: 0px;
+}
+
+.avatar-preview{
+	position: absolute;
+	right: 33px;
+	top: -17px;
+	width: 70px;
+    height: 70px;
+	border-radius: 100%;
+	cursor: pointer;
+}
+
+.avatar{
+	display: none;
+}
+
+.signup-btn{
+	margin-top: 25px;
+}
+
+.button{
+	display: block;
+	margin: auto;
+}	
