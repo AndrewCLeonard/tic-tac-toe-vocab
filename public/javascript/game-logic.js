@@ -1,4 +1,4 @@
-console.log("test to confirm js is connected. Change to process.argv to show file name?");
+console.log(`js is connected to file: ${document.getElementById.file.name}`);
 
 // initialize the original board. Will become an array containing what's in each square on the tic-tac-toe board
 var origBoard;
@@ -28,9 +28,9 @@ function startGame() {
 	origBoard = Array.from(Array(9).keys());
 	console.log(`test for keys of array: ${origBoard}`);
 	for (var i = 0; i < tableCells.length; i++) {
-		tableCells[i].innerText = "";
+		// tableCells[i].innerText = "";
 		tableCells[i].style.removeProperty("background-color");
-		tableCells[i].addEventListener("click", turnClick, false);
+		tableCells[i].addEventListener("click", logID, false);
 	}
 }
 
@@ -50,6 +50,10 @@ function startGame() {
 function turnClick(square) {
 	// not working: At 17:23 in freeCodeCamp.org video, clicking on squares should console.log the id of the square.
 	console.log(square.target.id);
+}
+
+function logID(e) {
+	console.log(`logID function for target id: ${e.target.id}`);
 }
 //      if one of these is met, game over
 
