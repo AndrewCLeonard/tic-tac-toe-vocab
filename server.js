@@ -3,7 +3,7 @@
 // ====================================================================================================
 
 // access file structure
-const fs = require("fs");
+// const fs = require("fs");
 const path = require("path");
 
 //
