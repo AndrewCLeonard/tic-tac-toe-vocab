@@ -1,4 +1,13 @@
-npm 
-/.DS_Store
-/node_modules
-/.env
+# OSX
+.DS_Store
+
+# Optional npm cache directory
+.npm
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# dotenv environment variables file
+.env
+.env.test

@@ -1,0 +1,271 @@
+/* ========================================================================== */
+/* TABLE OF CONTENTS */
+/* ========================================================================== */
+/* 
+
+global variables
+css variables
+menu 
+
+/* ========================================================================== */
+/* GLOBAL START */
+/* ========================================================================== */
+*,
+*::after,
+*::before {
+	/* box-sizing: content-box; */
+}
+
+body {
+	margin: 0;
+	border-color: black;
+}
+main {
+	display: flex;
+}
+
+/* GLOBAL END */
+
+/* ========================================================================== */
+/* VARIABLES START  */
+/* ========================================================================== */
+
+:root {
+	--fonts: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	/* header color alpha value should be 1, but having problems with Pure CSS, setting to transparent for now*/
+	--header-color: rgba(211, 211, 211, 0);
+}
+/* VARIABLES END */
+
+/* ========================================================================== */
+/* MENU STYLES START */
+/* ========================================================================== */
+
+.home-menu {
+	padding: 0.5em;
+	text-align: center;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	font-family: var(--fonts);
+}
+.home-menu {
+	background: var(--header-color);
+}
+.pure-menu.pure-menu-fixed {
+	/* Fixed menus normally have a border at the bottom. */
+	border-bottom: none;
+	/* z-index: 4; */
+}
+
+.home-menu .pure-menu-heading {
+	font-weight: 400;
+	font-size: 120%;
+}
+
+.home-menu .pure-menu-selected a {
+	color: white;
+}
+
+.home-menu a {
+	color: #6fbef3;
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+	background: none;
+	border: none;
+	color: #aecfe5;
+}
+
+/* -- MENU STYLES END -- */
+
+/* ========================================================================== */
+/* BOARD STYLES START */
+/* ========================================================================== */
+
+/* using ID selector because it's unique */
+#board {
+	/* do I need to specify viewport h and w if using Pure CSS grid? */
+	/* width: 50vw; */
+	/* height: 50vh; */
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	/* margin: 20px; */
+
+	/* overflow: hidden; */
+
+	/* justify-content makes the board go partially off-screen? Why? */
+	justify-content: center;
+	/* align-content: center; */
+
+	/* commented these out because they don't do anything? */
+
+	/* for checking things as needed */
+	/* background-color: black; */
+}
+/* BOARD STYLES END */
+
+/* ========================================================================== */
+/* CELL STYLES START */
+/* ========================================================================== */
+
+.cell {
+	/* width: var(--cell-size); */
+	/* height: var(--cell-size); */
+	border: 6px solid black;
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* position: relative; */
+	/* cursor: pointer; */
+}
+.cell img {
+	/* display: flex; */
+
+	margin: 10px;
+	/* height: 200px; */
+	/* for checking things as needed */
+	/* border-style: solid; */
+	/* border-color: blue; */
+	max-width: 100%;
+	height: auto;
+}
+
+.cell img:hover {
+	filter: saturate(150%);
+	cursor: pointer;
+	/* It would be nice if image size changed a bit when you hover over, but that's also now changing the border as well */
+	border-style: solid;
+	border-color: yellow;
+	border-width: small;
+	transition: all 300ms ease;
+}
+
+/* `cell applied to all 9 boxes on the tic-tac-toe board */
+
+/* BOARD STYLES END */
+
+/* ========================================================================== */
+/* TABLE STYLES START */
+/* ========================================================================== */
+.table-board {
+	margin: 20px;
+	min-width: 500px;
+}
+
+.table-cell {
+	/* background-color: black; */
+}
+
+table {
+	border-collapse: collapse;
+	width: 50%;
+}
+
+th,
+td {
+	border: 16px solid black;
+}
+
+/* remove the unnecessary borders from the table */
+table tr:first-child td {
+	border-top: 0;
+}
+
+table tr:last-child td {
+	border-bottom: 0;
+}
+
+table tr td:first-child {
+	border-left: 0;
+}
+
+table tr td:last-child {
+	border-right: 0;
+}
+
+/* style images for the table */
+.table-cell img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.table-cell:hover {
+	filter: saturate(150%);
+	cursor: pointer;
+	/* placeholder for now, use X's and O's on top of images soon */
+	background-color: yellow;
+	transition: 200ms ease;
+}
+/* CELL STYLES END */
+
+/* ========================================================================== */
+/* WORD LIST STYLES START */
+/* ========================================================================== */
+
+.word-list-title {
+	text-align: center;
+}
+/* TEXT STYLES END */
+
+.word-list {
+	display: inline-flex;
+	flex-flow: row wrap;
+	gap: 12px;
+	/* justify-content: space-around; */
+	align-items: flex-start;
+	margin: 20px;
+}
+
+/* ========================================================================== */
+/* BUTTON STYLES START */
+/* ========================================================================== */
+/* not using all of them yet, but we might */
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	padding: 15px 32px;
+	/* width: 25%; */
+}
+
+.button-success {
+	background: rgb(28, 184, 65);
+	/* this is a green */
+}
+
+.button-error {
+	background: rgb(202, 60, 60);
+	/* this is a maroon */
+}
+
+.button-warning {
+	background: rgb(223, 117, 20);
+	/* this is an orange */
+}
+
+.button-secondary {
+	background: rgb(66, 184, 221);
+	/* this is a light blue */
+}
+/* BUTTON SIZES  */
+
+.button-xsmall {
+	font-size: 70%;
+}
+
+.button-small {
+	font-size: 85%;
+}
+
+.button-large {
+	font-size: 110%;
+}
+
+.button-xlarge {
+	font-size: 250%;
+}
+/* BUTTON STYLES END */

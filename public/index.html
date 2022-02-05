@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Pure CSS  -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+			integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5"
+			crossorigin="anonymous"
+		/>
+		<!-- Pure CSS responsive grid stylesheet -->
+		<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+		<title>Tic-Tac-Toe-Vocab</title>
+		<!-- styles.css for selected overrides -->
+		<link rel="stylesheet" href="./stylesheets/styles.css" />
+	</head>
+	<!-- HEAD END -->
+
+	<!--BODY START  -->
+	<body>
+		<!-- HEADER START: logo, navigation  -->
+		<header class="header">
+			<!-- removing class .pure-menu-fixed changed menu from inline to block? -->
+			<div class="home-menu pure-menu pure-menu-horizontal">
+				<img src="./images/logos/tic-tac-toe-100x100.png" alt="Tic-Tac-Toe-Vocab logo" />
+
+				<!-- NAV START -->
+				<nav class="pure-menu-list">
+					<ul>
+						<!-- Q: pure css has .pure-menu-selected class to darken color of link of current page. Can this class  be added with Handlebars? -->
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">Upload</a></li>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">Gallery</a></li>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">FAQ</a></li>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">High Scores</a></li>
+					</ul>
+				</nav>
+				<!-- NAV END -->
+			</div>
+		</header>
+		<!-- HEADER END -->
+
+		<!-- MAIN START -->
+		<main>
+			<!-- TIC-TAC-TOE BOARD START -->
+			<table class="table-board">
+				<tr>
+					<!-- N.B. table-cell class will be used for querSelectorAll -->
+					<td class="table-cell top-row"><img src="./images/animals/cat.png" alt="" /></td>
+					<td class="table-cell top-row"><img src="./images/animals/cat.png" alt="" /></td>
+					<td class="table-cell top-row"><img src="./images/animals/cat.png" alt="" /></td>
+				</tr>
+				<tr>
+					<td class="table-cell"><img src="./images/animals/cat.png" alt="" /></td>
+					<td class="table-cell"><img src="./images/animals/cat.png" alt="" /></td>
+					<td class="table-cell"><img src="./images/animals/cat.png" alt="" /></td>
+				</tr>
+				<tr class="bottom-row">
+					<td class="table-cell bottom-row"><img src="./images/animals/cat.png" alt="" /></td>
+					<td class="table-cell bottom-row"><img src="./images/animals/cat.png" alt="" /></td>
+					<td class="table-cell bottom-row"><img src="./images/animals/cat.png" alt="" /></td>
+				</tr>
+			</table>
+			<!-- TIC-TAC-TOE BOARD END -->
+			<!-- WORD LIST START -->
+			<section>
+				<h2 class="word-list-title">Word List</h2>
+				<!-- flexbox for buthtons -->
+				<div class="word-list">
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+					<button class="pure-button button-large button-secondary">cat</button>
+				</div>
+			</section>
+			<!-- WORD LIST END -->
