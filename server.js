@@ -10,16 +10,17 @@ const path = require("path");
 const routes = require("./controllers/");
 const sequelize = require("./config/connection");
 
+// connect to port and allow automatic routing, or default to PORT 3001
 const PORT = process.env.PORT || 3001;
 
 // ====================================================================================================
 // EXPRESS.JS SECTION START
 // ====================================================================================================
-
-// connect to port and allow automatic routing, or default to PORT 3001
+//
+const express = require("express");
 const app = express();
 
-// For server to accept incoming data the way we need,tell Express.js app to intercept POST request before arriving to callback function.
+// For server to accept incoming data the way we need, tell Express.js app to intercept POST request before arriving to callback function.
 // The raw data will then be run through a couple of functions to take data transferred over HTTP and convert it to a JSON object.
 
 // parse incoming string or array data
@@ -59,6 +60,6 @@ app.set("view engine", "handlebars");
 // SEQUELIZE START
 // ====================================================================================================
 // turn on connection to db and server
-sequelize.sync({ force: false }).then(() => {
-	app.listen(PORT, () => console.log("Now listening"));
+sequelize.sync({ force: true }).then(() => {
+	app.listen(PORT, () => console.log(`Now listening on PORT ${PORT}`));
 });

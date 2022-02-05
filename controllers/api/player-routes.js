@@ -1,5 +1,8 @@
 const router = require("express").Router();
+// commented out next line, don't know what it's for
+// const res = require("express/lib/response");
 // ??? Need to confirm names of models
+// ??? 
 const { Player, Picture, Word, Game, Game_Board } = require("../../models");
 
 // ====================================================================================================
@@ -19,25 +22,22 @@ router.get("/", (req, res) => {
 
 // ====================================================================================================
 // get a single player
-// GET /api/players/1
+// GET /api/players/:id
 // ====================================================================================================
 router.get("/:id", (req, res) => {
 	Player.findOne({
 		attributes: { exclude: ["password"] },
-        where: {
-            id: req.params.id,
-        },
-        // `include` in sequelize = `join` in SQL
-        include: [
-            {
-                model: 
-            },
-            {
-                model: 
-            },
-        ]
+		where: {
+			Player_ID: req.params.id,
+		},
 	})
-		.then((dbPlayerData) => res.json(dbPlayerData))
+		.then((dbPlayerData) => {
+			if (!dbPlayerData) {
+				res.status(404).json({ message: "No player found with this id." });
+				return;
+			}
+			res.json(dbPlayerData);
+		})
 		.catch((err) => {
 			console.log(err);
 			res.status(500).json(err);
@@ -56,10 +56,55 @@ router.post("/", (req, res) => {
 		password: req.body.password,
 	});
 });
-// PUT /api/players/1
-router.put("/:id", (req, res) => {});
+// ====================================================================================================
+// update a player's info
+// PUT /api/players/:id
+// ====================================================================================================
+router.put("/:id", (req, res) => {
+	// expects {playerName: 'GoLakers', email: 'basketball4life@gmail.com', password: 'kobe24'}
 
-// DELETE /api/players/1
-router.delete("/:id", (req, res) => {});
+	// passing in req.body to only update what's passed through
+	Player.update(req.body, {
+		individualHooks: true,
+		where: {
+			id: req.params.id,
+		},
+	})
+		.then((dbPlayerData) => {
+			if (!dbPlayerData) {
+				res.status(404).json({ message: "No player found with this id" });
+				return;
+			}
+			res.json(dbPlayerData);
+		})
+		.catch((err) => {
+			console.log(err);
+			res.status(500).json(err);
+		});
+});
+
+// ====================================================================================================
+// DELETE a player
+// DELETE /api/players/:id
+// ====================================================================================================
+
+router.delete("/:id", (req, res) => {
+    Player.destroy({
+        where: {
+            id: req.params.id,
+        },
+    })
+    .then((dbPlayerData) => {
+        if (!dbPlayerData) {
+            res.status(404).json({ message: "No player found with this id." });
+            return;
+        }
+        res.json(dbPlayerData);
+    })
+    .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 module.exports = router;
