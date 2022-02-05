@@ -1,23 +1,49 @@
-const express = require('express');
-const routes = require('./controllers/');
-const sequelize = require('./config/connection');
+// access file structure
+const fs = require("fs");
+const path = require("path");
 
-const app = express();
+//
+const routes = require("./controllers/");
+const sequelize = require("./config/connection");
+
 const PORT = process.env.PORT || 3001;
-const exphbs = require('express-handlebars');
+
+// ==================================================
+// EXPRESS.JS SECTION START
+// ==================================================
+
+// connect to port and allow automatic routing, or default to PORT 3001
+const app = express();
+
+// connect to Handlebars
+const exphbs = require("express-handlebars");
 const hbs = exphbs.create({});
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
-app.use(express.json());
+// For server to accept incoming data the way we need,tell Express.js app to intercept POST request before arriving to callback function.
+// The raw data will then be run through a couple of functions to take data transferred over HTTP and convert it to a JSON object.
+
+// parse incoming string or array data
+// Express.js method to take incoming POST data and convert it to key/value pairings that can be accessed by `req.body` object.
+// `extended: true` = telling Express to look for sub-arrays
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+
+// middleware to parse incoming JSON data
+// takes incoming POST data in JSON form and parses in into the `req.body` js object.
+app.use(express.json());
+
+//
+app.use(express.static(path.join(__dirname, "public")));
 
 // turn on routes
 app.use(routes);
 
+// ==================================================
+// EXPRESS.JS SECTION END
+// ==================================================
 // turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+	app.listen(PORT, () => console.log("Now listening"));
 });
