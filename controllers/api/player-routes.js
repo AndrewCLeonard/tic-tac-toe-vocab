@@ -2,8 +2,8 @@ const router = require("express").Router();
 // commented out next line, don't know what it's for
 // const res = require("express/lib/response");
 // ??? Need to confirm names of models
-// ??? 
-const { Player, Picture, Word, Game, Game_Board } = require("../../models");
+//
+const { Player } = require("../../models");
 
 // ====================================================================================================
 // get all players
@@ -89,22 +89,22 @@ router.put("/:id", (req, res) => {
 // ====================================================================================================
 
 router.delete("/:id", (req, res) => {
-    Player.destroy({
-        where: {
-            id: req.params.id,
-        },
-    })
-    .then((dbPlayerData) => {
-        if (!dbPlayerData) {
-            res.status(404).json({ message: "No player found with this id." });
-            return;
-        }
-        res.json(dbPlayerData);
-    })
-    .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
-    });
+	Player.destroy({
+		where: {
+			id: req.params.id,
+		},
+	})
+		.then((dbPlayerData) => {
+			if (!dbPlayerData) {
+				res.status(404).json({ message: "No player found with this id." });
+				return;
+			}
+			res.json(dbPlayerData);
+		})
+		.catch((err) => {
+			console.log(err);
+			res.status(500).json(err);
+		});
 });
 
 module.exports = router;
