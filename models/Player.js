@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection.js');
 
 // create our User model
-const Players = sequelize.define('Players', {  
+const Player = sequelize.define('Player', {  
   firstname: {
     type: DataTypes.STRING,
     allowNull: false
@@ -30,14 +30,14 @@ const Players = sequelize.define('Players', {
   { 
     hooks: {
       // set up beforeCreate lifecycle "hook" functionality
-      async beforeCreate(newPlayersData) {
-        newUserData.password = await bcrypt.hash(newPlayersData.password, 10);
-        return newPlayersData;
+      async beforeCreate(newPlayerData) {
+        newUserData.password = await bcrypt.hash(newPlayerData.password, 10);
+        return newPlayerData;
       },
 
-      async beforeUpdate(updatedPlayersData) {
-        updatedPlayersData.password = await bcrypt.hash(updatedPlayersData.password, 10);
-        return updatedPlayersData;
+      async beforeUpdate(updatedPlayerData) {
+        updatedPlayersData.password = await bcrypt.hash(updatedPlayerData.password, 10);
+        return updatedPlayerData;
       }
     },
   sequelize,
@@ -50,7 +50,7 @@ const Players = sequelize.define('Players', {
 
 
 // `sequelize.define` also returns the model
-console.log(Players === sequelize.models.Players); // true
+console.log(Player === sequelize.models.Player); // true
 
 
-module.exports = Players;
+module.exports = Player;
