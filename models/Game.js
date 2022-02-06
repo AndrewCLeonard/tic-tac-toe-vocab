@@ -1,20 +1,19 @@
-const { DataTypes } = require("sequelize"); // Do we need to inclued Model here? 
+const { DataTypes } = require("sequelize"); // Do we need to inclued Model here?
 const sequelize = require("../config/connection.js");
-
 
 const Game = sequelize.define("Game", {
 	gameid: {
 		type: DataTypes.INTEGER,
-		primaryKey: true;
-        autoIncrement: true,
-        allowNull: false,
+		primaryKey: true,
+		autoIncrement: true,
+		allowNull: false,
 	},
-	playeraid: {
+	playerAId: {
 		type: DataTypes.INTEGER,
 		unique: true,
 		allowNull: false,
 	},
-	playerbid: {
+	playerBId: {
 		type: DataTypes.INTEGER,
 		unique: true,
 		allowNull: false,
@@ -26,26 +25,26 @@ const Game = sequelize.define("Game", {
 			len: [4],
 		},
 	},
-	pictureid: {
+	pictureId: {
 		type: DataTypes.INTEGER,
 		unique: true,
 		allowNull: false,
 	},
-	wordid: {
+	wordId: {
 		type: DataTypes.INTEGER,
 		unique: true,
 		allowNull: false,
 	},
-	subjectid: {
+	subjectId: {
 		type: DataTypes.INTEGER,
 		unique: true,
 		allowNull: false,
 	},
-	winningplayerid: {
+	winningPlayerId: {
 		type: DataTypes.INTEGER,
 		allowNull: false,
 	},
-	losingplayerid: {
+	losingPlayerId: {
 		type: DataTypes.INTEGER,
 		allowNull: false,
 	},

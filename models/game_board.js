@@ -8,7 +8,7 @@ const Game_Board = sequelize.define('Game_Board',  {
         allowNull: false,
         unique: true
     },
-    pictureid: {
+    pictureId: {
         type: DataTypes.INTEGER,
         allowNull: false,
         unique: true
@@ -18,7 +18,7 @@ const Game_Board = sequelize.define('Game_Board',  {
         allowNull: false,
         unique: true
     },
-    wordid: { 
+    wordId: { 
         type: DataTypes.INTEGER,
         unique: true,
         allowNull: false

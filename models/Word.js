@@ -17,7 +17,7 @@ const Word = sequelize.define(
 			type: DataTypes.STRING,
 			AllowNull: false,
 		},
-		wordid: {
+		wordId: {
 			type: DataTypes.INTEGER,
 			AllowNull: false,
 			unique: true,
