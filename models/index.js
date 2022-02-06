@@ -1,5 +1,6 @@
+// import all models
 const Game = require('./Game');
-const Game_Board = require('./Game_board');
+const Game_Board = require('./Game_Board');
 const Player = require('./Player');
 const Words = require('./Word');
 const Picture = require('./Picture');

@@ -1,12 +1,13 @@
-const { Model, DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
+const { DataTypes } = require("sequelize"); // Do we need to inclued Model here? 
 const sequelize = require("../config/connection.js");
+
 
 const Game = sequelize.define("Game", {
 	gameid: {
 		type: DataTypes.INTEGER,
-		unique: true,
-		allowNull: false,
+		primaryKey: true;
+        autoIncrement: true,
+        allowNull: false,
 	},
 	playeraid: {
 		type: DataTypes.INTEGER,
