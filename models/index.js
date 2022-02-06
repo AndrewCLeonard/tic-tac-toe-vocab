@@ -2,7 +2,7 @@ const Game = require('./Game');
 const GameBoard = require('./Game_Board');
 const Players = require('./Player');
 const Words = require('./Word');
-const Pictures = require('./Pictures');
+// const Pictures = require('./Picture');
 
 //create associations
 Players.

@@ -1,4 +1,4 @@
-const { sequelize, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
 const pictures = sequelize.define('picture', {
@@ -21,6 +21,6 @@ const pictures = sequelize.define('picture', {
 });
 
 //`sequelize.define` also returns the model
-console.log(picture === sequelize.models.picture); //true
+// console.log(Picture === sequelize.models.picture); //true
 
 module.exports = picture;
