@@ -1,6 +1,16 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const Game = require('./Game');
+const GameBoard = require('./Game_Board');
+const Players = require('./Player');
+const Words = require('./Word');
+const Pictures = require('./Pictures');
 
-class players extends Model {}
+//create associations
+Players.
 
-module.exports = { players };
+Players.belongsToMany(Game, {
+  foreignKey: 'Game'
+});
+
+
+
+module.exports = { Game, GameBoard, Players, Words, Pictures };

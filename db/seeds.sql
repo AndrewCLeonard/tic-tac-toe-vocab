@@ -1,100 +1,27 @@
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (1,'jbyrch0','AeYze0bDp','Jere','Byrch');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (2,'aseverns1','Hs8McLV1d','Anthiathia','Severns');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (3,'fyurygyn2','3CC2jux16J','Faith','Yurygyn');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (4,'cverryan3','8KWUn1k','Constantine','Verryan');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (5,'rfoy4','j0wRWr','Rae','Foy');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (6,'brandals5','WP7th4K','Becky','Randals');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (7,'lblenkinsopp6','CeLOUSAxTp','Lezley','Blenkinsopp');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (8,'vpane7','DOHRCjCyRu','Vivi','Pane');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (9,'mcrady8','E0HOOj','Morie','Crady');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (10,'crapley9','MAvUBAa1','Cammi','Rapley');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (11,'asibillea','CdWJMH','Alano','Sibille');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (12,'tscutterb','NqOIvVnPXZyR','Thekla','Scutter');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (13,'rschleicherc','pzRecJCv','Rosy','Schleicher');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (14,'gcheetamd','INkVzldY5','Gunar','Cheetam');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (15,'amosse','a9yRvS4Q','Arie','Moss');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (16,'rdealf','ieB3ybYkohi','Rustin','Deal');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (17,'btewelsong','xiPgWFBw','Bartolomeo','Tewelson');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (18,'clangelayh','mZAXdHN','Cassey','Langelay');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (19,'ncallissi','f99XE30EthQO','Nona','Calliss');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (20,'bhaukeyj','wMOGj8UmJ','Bartholomeo','Haukey');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (21,'hmccabek','aEBpFv8S','Hobard','McCabe');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (22,'asawartl','iOaumuFlg','Adlai','Sawart');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (23,'cbernardesm','xTuSKYg','Cobby','Bernardes');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (24,'ypetrellon','JBSs6C','Yvon','Petrello');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (25,'ldallewatero','eQWfRkre','Lorri','Dallewater');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (26,'cjecksp','AYblxxKhO','Consuela','Jecks');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (27,'abischoffq','IYGs5vChGY','Ashly','Bischoff');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (28,'sreddishr','poSZMj','Spencer','Reddish');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (29,'ocoes','sqSkcobX','Odella','Coe');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (30,'cjustt','lO6ZzyDRrFFH','Clarita','Just');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (31,'mgermonu','JjdW6Gz','Malissa','Germon');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (32,'lpadburyv','pCzzfY','Ladonna','Padbury');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (33,'rstarmorew','aYKXLQ4RG8lX','Ruben','Starmore');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (34,'ebetoniax','HXKGYxHuU','Erina','Betonia');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (35,'ebootmany','W5UQFwij','Eldridge','Bootman');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (36,'jmcsperrinz','lhUH0nH','Joelie','McSperrin');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (37,'pjohannes10','tu3eNcrV','Prudi','Johannes');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (38,'mdancey11','4lWfpktT8','Marcus','Dancey');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (39,'bheimes12','XfF6Fjl','Barrie','Heimes');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (40,'temmanuel13','964wfWZU','Torrie','Emmanuel');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (41,'lmalimoe14','ftQ0pb','Letisha','Malimoe');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (42,'ttue15','EMzYEBnBWtyS','Trevor','Tue');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (43,'mheyburn16','tYJYq90kbL','May','Heyburn');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (44,'cbottrell17','72DpmYkQiE','Cynthea','Bottrell');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (45,'rdownage18','8DEYGplDDL','Reeta','Downage');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (46,'jrichardet19','mIbBjeDwgBgc','Junia','Richardet');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (47,'bmeachan1a','6bydSCT','Brianna','Meachan');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (48,'mclinnick1b','t3HFE7','Morry','Clinnick');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (49,'hcumesky1c','nJqEYa','Homere','Cumesky');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (50,'hradish1d','cOMSZJbJfpa','Harriet','Radish');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (51,'rnoye1e','TbudoArI','Ronald','Noye');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (52,'pyakunikov1f','OHuz7Hk','Percy','Yakunikov');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (53,'fdunbobbin1g','gQvCgJpg3W','Fidelity','Dunbobbin');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (54,'flerohan1h','oJwCnU','Filbert','Lerohan');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (55,'gscardafield1i','J70lvo4VhRs','Gaelan','Scardafield');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (56,'mcleugh1j','jRI6LlV','Melodee','Cleugh');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (57,'tshovelin1k','bEOMik','Tomlin','Shovelin');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (58,'aswatridge1l','vaxDaGe','Alejoa','Swatridge');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (59,'lmathiasen1m','1vacsz7z2','Latisha','Mathiasen');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (60,'zgriffey1n','rtkVOn9','Zora','Griffey');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (61,'alobe1o','BNOBrVZqZefZ','Arron','Lobe');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (62,'jpaladini1p','ku69JD01k','Janey','Paladini');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (63,'mveale1q','GSmCGqFgC','Mac','Veale');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (64,'igamet1r','WU6Euk','Ibrahim','Gamet');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (65,'sstruys1s','CNqKq1URX','Sloane','Struys');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (66,'kgwilliam1t','006Nkza','Kennett','Gwilliam');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (67,'bnoir1u','8uaTyEQbSuIE','Bendix','Noir');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (68,'fscapens1v','8gZIm9xVw4T','Felicle','Scapens');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (69,'mmullinder1w','cLF7uGf2hb','Molli','Mullinder');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (70,'rtompkinson1x','kUNV6v','Rose','Tompkinson');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (71,'jrolfi1y','WyyBnF','Jerome','Rolfi');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (72,'pphilippet1z','XY6t6I79E','Pauli','Philippet');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (73,'leallis20','ZOnV4b3Hq','Lesley','Eallis');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (74,'ajudkins21','HXztlfHPbzYB','Ailene','Judkins');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (75,'ahenri22','6dN82Cl','Anastasie','Henri');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (76,'drove23','8AZEUdzSE2','Denise','Rove');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (77,'lmilley24','FcyTrqw','Lorry','Milley');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (78,'tbouldstridge25','l0sQcZw5O','Tina','Bouldstridge');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (79,'mtakos26','l6T9RCrS','Marjy','Takos');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (80,'bgolightly27','AyVwzvuViG','Biddy','Golightly');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (81,'jtollow28','oU0QcKY3KU','Jilly','Tollow');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (82,'uhubbis29','EKBN47WfC','Ursola','Hubbis');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (83,'nwoolliams2a','Otk45V2L7i','Natasha','Woolliams');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (84,'hdocherty2b','uRTd4mj','Hermon','Docherty');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (85,'qmolohan2c','giGmy6Odm95','Quinn','Molohan');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (86,'wmurr2d','xg2LI6v','Wolfy','Murr');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (87,'hlevi2e','Aq0DRnbY','Hugh','Levi');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (88,'mgooley2f','ZDOi4TRXvsb','Mireielle','Gooley');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (89,'rbum2g','vHbb7ztDO','Riordan','Bum');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (90,'aogrowgane2h','DExQZauQgz9','Alisun','O''Growgane');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (91,'alouth2i','1XTvVc8Cds6','Arnoldo','Louth');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (92,'ewrench2j','RawU20T9Sp4e','Engracia','Wrench');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (93,'mlepick2k','cIX9AEt','Madlin','Lepick');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (94,'siddens2l','8y0yNX','Seth','Iddens');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (95,'tlett2m','fSqKU1Zf0','Trula','Lett');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (96,'cclerk2n','5eMxmKVDLFRW','Carleen','Clerk');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (97,'rmoynihan2o','Uz3ARgxisLf','Rutherford','Moynihan');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (98,'nmclafferty2p','tSZXy5vTdSr','Niccolo','McLafferty');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (99,'nroff2q','N3CIcDf9yLR','Nathalia','Roff');
-INSERT INTO players(id,username,Password,first_name,last_name) VALUES (100,'jheeney2r','jcukpc','Javier','Heeney');
+USE tictacdb;
+
+CREATE TABLE users
+(
+  id INT NOT NULL
+  AUTO_INCREMENT,
+  username VARCHAR
+  (100) NOT NULL,
+  password VARCHAR
+  (100) NOT NULL,
+  profileUrl VARCHAR
+  (1000),
+  userPokemon INTEGER
+  (100),
+  loggedOn BOOLEAN,
+  wins INTEGER
+  (100),
+  losses INTEGER
+  (200),
+  createdAt datetime ,
+  updatedAt datetime,
+  PRIMARY KEY
+  (id)
+);
+
+  INSERT INTO users
+    (username, password, wins, losses)

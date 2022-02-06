@@ -1,12 +1,56 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require('sequelize');
+const bcrypt = require('bcrypt');
+const sequelize = require('../config/connection.js');
 
-// bcrypt for hashing passwords
-const bcrypt = require("bcrypt");
+// create our User model
+const Players = sequelize.define('Players', {  
+  firstname: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  lastname: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    // allowNull defaults to true
+    }, 
+  username: {
+    type: DataTypes.STRING,
+    unique: true,
+    allowNull: false,
+  // Other model options go here
+    },
+  password: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    validate: {
+      len: [4]
+    }
+  }
+},
+  { 
+    hooks: {
+      // set up beforeCreate lifecycle "hook" functionality
+      async beforeCreate(newPlayersData) {
+        newUserData.password = await bcrypt.hash(newPlayersData.password, 10);
+        return newPlayersData;
+      },
 
-// create our players model
-class Player extends Model {
-        
-}
+      async beforeUpdate(updatedPlayersData) {
+        updatedPlayersData.password = await bcrypt.hash(updatedPlayersData.password, 10);
+        return updatedPlayersData;
+      }
+    },
+  sequelize,
+  timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'user'
+  }
+);
 
-module.exports = Player;
+
+// `sequelize.define` also returns the model
+console.log(Players === sequelize.models.Players); // true
+
+
+module.exports = Players;
