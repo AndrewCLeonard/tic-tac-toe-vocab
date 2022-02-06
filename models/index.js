@@ -1,5 +1,5 @@
 const Game = require('./Game');
-const GameBoard = require('./Game_board');
+const GameBoard = require('./Game_Board');
 const Players = require('./Player');
 const Words = require('./Word');
 const Pictures = require('./Pictures');
