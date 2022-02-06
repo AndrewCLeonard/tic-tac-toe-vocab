@@ -5,7 +5,14 @@
 
 global variables
 css variables
-menu 
+menu styles
+board styles
+cell styles (see note below)
+table styles
+word list styles 
+button styles
+Harry Styles
+
 
 /* ========================================================================== */
 /* GLOBAL START */
@@ -27,7 +34,7 @@ main {
 /* GLOBAL END */
 
 /* ========================================================================== */
-/* VARIABLES START  */
+/* CSS VARIABLES START  */
 /* ========================================================================== */
 
 :root {
@@ -105,8 +112,8 @@ main {
 
 /* ========================================================================== */
 /* CELL STYLES START */
+/* N.B. Andy was using these when trying to create board using CSS grid. I think these will be deleted soon because using a HTML table seems to work better */
 /* ========================================================================== */
-
 .cell {
 	/* width: var(--cell-size); */
 	/* height: var(--cell-size); */
@@ -194,8 +201,8 @@ table tr td:last-child {
 	filter: saturate(150%);
 	cursor: pointer;
 	/* placeholder for now, use X's and O's on top of images soon */
-	background-color: yellow;
-	transition: 200ms ease;
+	/* background-color: yellow; */
+	/* transition: 200ms ease; */
 }
 /* CELL STYLES END */
 
@@ -268,4 +275,6 @@ table tr td:last-child {
 .button-xlarge {
 	font-size: 250%;
 }
+
+
 /* BUTTON STYLES END */
