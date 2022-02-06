@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
-const Picture = sequelize.define('picture', {
+const Picture = sequelize.define('Picture', {
     wordId: {
         type: DataTypes.STRING,
         allowNull: false
