@@ -1,55 +1,56 @@
-<<<<<<< HEAD
-module.exports = function(sequelize, DataTypes) {
-    var Players = sequelize.define("Players", {
-      username: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      password: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      
-      loggedOn: DataTypes.BOOLEAN,
-      
-      wins: {
-        type: DataTypes.INTEGER,
-        defaultValue: 0
-      },
-      losses: {
-        type: DataTypes.INTEGER,
-        defaultValue: 0
-      },
-    });
-    return Players;
-  };
-  //this is the user's model!
-=======
-const { sequelize, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection.js');
 
 // create our User model
-const User = sequelize.define('User', {  
-    firstName: {
+const Players = sequelize.define('Players', {  
+  firstname: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  lastName: {
-    type: DataTypes.STRING
+  lastname: {
+    type: DataTypes.STRING,
+    allowNull: false,
     // allowNull defaults to true
     }, 
-    userName: {
-        type: DataTypes.STRING
+  username: {
+    type: DataTypes.STRING,
+    unique: true,
+    allowNull: false,
   // Other model options go here
     },
-    passWord: {
-        type: DataTypes.STRING
+  password: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    validate: {
+      len: [4]
+    }
+  }
+},
+  { 
+    hooks: {
+      // set up beforeCreate lifecycle "hook" functionality
+      async beforeCreate(newPlayersData) {
+        newUserData.password = await bcrypt.hash(newPlayersData.password, 10);
+        return newPlayersData;
+      },
+
+      async beforeUpdate(updatedPlayersData) {
+        updatedPlayersData.password = await bcrypt.hash(updatedPlayersData.password, 10);
+        return updatedPlayersData;
+      }
     },
-});
+  sequelize,
+  timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'user'
+  }
+);
+
 
 // `sequelize.define` also returns the model
-console.log(User === sequelize.models.User); // true
+console.log(Players === sequelize.models.Players); // true
 
 
-module.exports = User;
->>>>>>> a5f9095ca8ebb0c732240ed72a84085153269c6e
+module.exports = Players;
