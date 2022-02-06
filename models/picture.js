@@ -1,7 +1,7 @@
 const { sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
-const pictures = sequelize.define('picture', {
+const Picture = sequelize.define('picture', {
     wordId: {
         type: DataTypes.STRING,
         allowNull: false
@@ -21,6 +21,6 @@ const pictures = sequelize.define('picture', {
 });
 
 //`sequelize.define` also returns the model
-console.log(picture === sequelize.models.picture); //true
+console.log(Picture === sequelize.models.Picture); //true
 
-module.exports = picture;
+module.exports = Picture;
