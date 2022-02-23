@@ -5,7 +5,14 @@
 
 global variables
 css variables
-menu 
+menu styles
+board styles
+cell styles (see note below)
+table styles
+word list styles 
+button styles
+Harry Styles
+
 
 /* ========================================================================== */
 /* GLOBAL START */
@@ -27,7 +34,7 @@ main {
 /* GLOBAL END */
 
 /* ========================================================================== */
-/* VARIABLES START  */
+/* CSS VARIABLES START  */
 /* ========================================================================== */
 
 :root {
@@ -105,8 +112,8 @@ main {
 
 /* ========================================================================== */
 /* CELL STYLES START */
+/* N.B. Andy was using these when trying to create board using CSS grid. I think these will be deleted soon because using a HTML table seems to work better */
 /* ========================================================================== */
-
 .cell {
 	/* width: var(--cell-size); */
 	/* height: var(--cell-size); */
@@ -165,22 +172,24 @@ td {
 	border: 16px solid black;
 }
 
-.table-cell:nth-child(1) {
-	border-left: none;
+/* remove the unnecessary borders from the table */
+table tr:first-child td {
+	border-top: 0;
 }
 
-.table-cell:nth-child(3) {
-	border-right: none;
+table tr:last-child td {
+	border-bottom: 0;
 }
 
-.top-row {
-	border-top: none;
+table tr td:first-child {
+	border-left: 0;
 }
 
-.bottom-row {
-	border-bottom: none;
+table tr td:last-child {
+	border-right: 0;
 }
 
+/* style images for the table */
 .table-cell img {
 	display: block;
 	margin-left: auto;
@@ -191,9 +200,9 @@ td {
 .table-cell:hover {
 	filter: saturate(150%);
 	cursor: pointer;
-	/* I don't like how border also changing */
-	background-color: yellow;
-	transition: 200ms ease;
+	/* placeholder for now, use X's and O's on top of images soon */
+	/* background-color: yellow; */
+	/* transition: 200ms ease; */
 }
 /* CELL STYLES END */
 
@@ -266,4 +275,6 @@ td {
 .button-xlarge {
 	font-size: 250%;
 }
+
+
 /* BUTTON STYLES END */

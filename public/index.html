@@ -1,82 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- Pure CSS  -->
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
-			integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5"
-			crossorigin="anonymous"
-		/>
-		<!-- Pure CSS responsive grid stylesheet -->
-		<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
-		<title>Tic-Tac-Toe-Vocab</title>
-		<!-- styles.css for selected overrides -->
-		<link rel="stylesheet" href="./stylesheets/styles.css" />
-	</head>
-	<!-- HEAD END -->
 
-	<!--BODY START  -->
-	<body>
-		<!-- HEADER START: logo, navigation  -->
-		<header class="header">
-			<!-- removing class .pure-menu-fixed changed menu from inline to block? -->
-			<div class="home-menu pure-menu pure-menu-horizontal">
-				<img src="./images/logos/tic-tac-toe-100x100.png" alt="Tic-Tac-Toe-Vocab logo" />
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Pure CSS  -->
+	<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+		integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous" />
+	<!-- Pure CSS responsive grid stylesheet -->
+	<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+	<title>Tic-Tac-Toe-Vocab</title>
+	<!-- styles.css for selected overrides -->
+	<link rel="stylesheet" href="./stylesheets/style.css" />
+</head>
 
-				<!-- NAV START -->
-				<nav class="pure-menu-list">
-					<ul>
-						<!-- Q: pure css has .pure-menu-selected class to darken color of link of current page. Can this class  be added with Handlebars? -->
-						<li class="pure-menu-item"><a href="#" class="pure-menu-link">Upload</a></li>
-						<li class="pure-menu-item"><a href="#" class="pure-menu-link">Gallery</a></li>
-						<li class="pure-menu-item"><a href="#" class="pure-menu-link">FAQ</a></li>
-						<li class="pure-menu-item"><a href="#" class="pure-menu-link">High Scores</a></li>
-					</ul>
-				</nav>
-				<!-- NAV END -->
-			</div>
-		</header>
-		<!-- HEADER END -->
+<body>
+	<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+		<a class="pure-menu-heading" href="index.html"><img src="/public/images/logos/tic-tac-toe-500x728.png" /></a>
 
-		<!-- MAIN START -->
-		<main>
-			<!-- TIC-TAC-TOE BOARD START -->
-			<table class="table-board">
-				<tr>
-					<td class="table-cell top-row"><img src="./images/animals/cat.png" alt="" /></td>
-					<td class="table-cell top-row"><img src="./images/animals/cat.png" alt="" /></td>
-					<td class="table-cell top-row"><img src="./images/animals/cat.png" alt="" /></td>
-				</tr>
-				<tr>
-					<td class="table-cell"><img src="./images/animals/cat.png" alt="" /></td>
-					<td class="table-cell"><img src="./images/animals/cat.png" alt="" /></td>
-					<td class="table-cell"><img src="./images/animals/cat.png" alt="" /></td>
-				</tr>
-				<tr class="bottom-row">
-					<td class="table-cell bottom-row"><img src="./images/animals/cat.png" alt="" /></td>
-					<td class="table-cell bottom-row"><img src="./images/animals/cat.png" alt="" /></td>
-					<td class="table-cell bottom-row"><img src="./images/animals/cat.png" alt="" /></td>
-				</tr>
-			</table>
-			<!-- TIC-TAC-TOE BOARD END -->
-			<!-- WORD LIST START -->
-			<section>
-				<h2 class="word-list-title">Word List</h2>
-				<!-- flexbox for buthtons -->
-				<div class="word-list">
-					<button class="pure-button button-large button-secondary">cat</button>
-					<button class="pure-button button-large button-secondary">cat</button>
-					<button class="pure-button button-large button-secondary">cat</button>
-					<button class="pure-button button-large button-secondary">cat</button>
-					<button class="pure-button button-large button-secondary">cat</button>
-					<button class="pure-button button-large button-secondary">cat</button>
-					<button class="pure-button button-large button-secondary">cat</button>
-					<button class="pure-button button-large button-secondary">cat</button>
-					<button class="pure-button button-large button-secondary">cat</button>
+		<ul class="pure-menu-list">
+			<li class="pure-menu-item pure-menu-selected"><a href="index.html" class="pure-menu-link">Home</a></li>
+			<li class="pure-menu-item"><a href="upload.html" class="pure-menu-link">Upload</a></li>
+			<li class="pure-menu-item"><a href="highdscores.html" class="pure-menu-link">High-scores</a></li>
+			<li class="pure-menu-item"><button onclick="window.location.href='login.html'"
+					class="pure-button login-button login-button-tab">Login</button></li>
+		</ul>
+	</div>
+	<div class="content">
+		<div class="pure-g main-area">
+			<div class="pure-u-1 pure-u-md-1-2 main-board">
+				<!-- GAME BOARD -->
+				<div id="app" class="game-board">
+					<div class="box"><img class="pure-img" src="/public/images/animals/seal-196x196.png"></div>
+					<div class="box"><img class="pure-img" src="/public/images/animals/cat-196x196.png"></div>
+					<div class="box"><img class="pure-img" src="/public/images/animals/deer-196x196.png"></div>
+					<div class="box"><img class="pure-img" src="/public/images/animals/dog-196x196.png"></div>
+					<div class="box"><img class="pure-img" src="/public/images/animals/elephant-196x196.png"></div>
+					<div class="box"><img class="pure-img" src="/public/images/animals/flamingo-196x196.png"></div>
+					<div class="box"><img class="pure-img" src="/public/images/animals/giraffe_2-196x196.png"></div>
+					<div class="box"><img class="pure-img" src="/public/images/animals/koala-196x196.png"></div>
+					<div class="box"><img class="pure-img" src="/public/images/animals/toucan-196x196.png"></div>
 				</div>
-			</section>
-			<!-- WORD LIST END -->
+			</div>
+			<!-- WORD BOARD -->
+			<div class="pure-u-1 pure-u-md-1-2 word-board">
+				<div class="game-board-2">
+					<div class="box-2">Elefante</div>
+					<div class="box-2">Alce</div>
+					<div class="box-2">Tucan</div>
+					<div class="box-2">Coala</div>
+					<div class="box-2">Gato</div>
+					<div class="box-2">Perro</div>
+					<div class="box-2">Flamenco</div>
+					<div class="box-2">Conejo</div>
+					<div class="box-2">Foca</div>
+				</div>
+				<div class="pure-g">
+					<button class="reset-button pure-button pure-u-1-2">Reset</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class=" pure-u-1 footer l-box is-center">
+			<p>Please match the text with an image</p>
+		</div>
+
+	</div>
+	<script src="/public/javascript/script.js" type="module"></script>
+</body>
+
+</html>

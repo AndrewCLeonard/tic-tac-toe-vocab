@@ -39,7 +39,7 @@ If you've never played tic-tac-toe, read [Wikipedia's description](https://en.wi
 
 Players create logins to save their info:
 
--   username/password
+-   playerName/password
 -   list of their vocab words
 -   game boards they've created
 
