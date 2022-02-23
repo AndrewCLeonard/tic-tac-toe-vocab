@@ -13,4 +13,4 @@ export default class Game {
             this.board[i] = this.turn;
         this.nextTurn()
     }
-}
+} 

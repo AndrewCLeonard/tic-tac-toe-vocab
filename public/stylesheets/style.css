@@ -110,7 +110,7 @@ label {
   border-bottom: none;
   /* I need a higher z-index here because of the scroll-over effect. */
   z-index: 4;
-  font-family: Helvetica;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .home-menu .pure-menu-heading {
@@ -207,11 +207,6 @@ label {
   color: #aaa;
 }
 
-/* This is the class used for the footer */
-.footer {
-  background: #56c4a4;
-  color: #fff;
-}
 .main-area {
   padding-top: 9.4em;
 }
@@ -235,7 +230,7 @@ label {
 .box {
   border: 6px solid #fc910f;
   border-radius: 2px;
-  font-family: Helvetica;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 4em;
   display: flex;
@@ -261,7 +256,7 @@ label {
 .box-2 {
   border: 6px solid #342d53;
   border-radius: 2px;
-  font-family: Helvetica;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 1.4em;
   display: flex;
@@ -325,10 +320,14 @@ label {
   text-align: center;
 }
 
+/* This is the class used for the footer */
 .footer {
+  background: #56c4a4;
+  color: #fff;
   text-align: center;
   padding: 1em;
   font-size: 80%;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 @media (min-width: 30em) {

@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize"); // Do we need to inclued Model here?
 const sequelize = require("../config/connection.js");
 
 const Game = sequelize.define("Game", {
-	gameid: {
+	gameId: {
 		type: DataTypes.INTEGER,
 		primaryKey: true,
 		autoIncrement: true,
