@@ -1,13 +1,14 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection.js");
 
-const Word = sequelize.define(
-	"Word",
+class Word extends Model {}
+	Word.init(
 	{
 		id: {
 			type: DataTypes.INTEGER,
 			AllowNull: false,
 			primaryKey: true,
+			autoIncrement: true
 		},
 		engdesc: {
 			type: DataTypes.STRING,
@@ -25,7 +26,6 @@ const Word = sequelize.define(
 	},
 	{
 		sequelize,
-		timestamps: false,
 		freezeTableName: true,
 		underscored: true,
 		modelName: "Word",

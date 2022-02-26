@@ -1,39 +1,49 @@
 const { DataTypes } = require("sequelize"); // Do we need to inclued Model here?
 const sequelize = require("../config/connection.js");
 
-const Game = sequelize.define("Game", {
-	gameid: {
+class Game extends Game {}
+
+Game.init(
+	{
+	  gameid: {
 		type: DataTypes.INTEGER,
 		primaryKey: true,
 		autoIncrement: true,
 		allowNull: false,
-	},
-	playerAId: {
+	  },
+	  playerAId: {
 		type: DataTypes.INTEGER,
-		unique: true,
-		allowNull: false,
-	},
-	playerBId: {
+		references: {
+			model: 'player',
+			key: 'id'
+		}
+	  },
+	  playerBId: {
 		type: DataTypes.INTEGER,
-		unique: true,
-		allowNull: false,
+		references: {
+			model: 'player',
+			key: 'id'
+		}
 	},
-	password: {
+	  password: {
 		type: DataTypes.STRING,
 		allowNull: false,
 		validate: {
-			len: [4],
-		},
-	},
+		len: [4],
+	}
+},
 	pictureId: {
-		type: DataTypes.INTEGER,
-		unique: true,
-		allowNull: false,
-	},
+		references: {
+			model: 'picture',
+			key: 'id'
+	}
+},
 	wordId: {
 		type: DataTypes.INTEGER,
-		unique: true,
-		allowNull: false,
+		references: {
+			model: 'word',
+			key: 'id'
+		}
 	},
 	subjectId: {
 		type: DataTypes.INTEGER,
